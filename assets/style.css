@@ -94,6 +94,61 @@ main {
     box-shadow: 0 0 300px 500px black;
 }
 
+/* ANIMATIONS */
+
+.slide-right {
+    transform-origin: 50% 50%;
+    animation: slide-right-anim 1s ease 0s 1 normal both running;
+}
+
+.slide-right-2 {
+    transform-origin: 50% 50%;
+    animation: slide-right-anim 1s ease 0s 1 normal both running;
+    animation-delay: 1.2s;
+}
+
+@keyframes slide-right-anim {
+    0% {
+        transform: translate(-100px, 0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+.slide-left {
+    transform-origin: 50% 50%;
+    animation: slide-left-anim 1s ease 0s 1 normal both running;
+    animation-delay: 0.5s;
+}
+
+.slide-left-2 {
+    transform-origin: 50% 50%;
+    animation: slide-left-anim 1s ease 0s 1 normal both running;
+    animation-delay: 0.7s;
+}
+
+.slide-left-3 {
+    transform-origin: 50% 50%;
+    animation: slide-left-anim 1s ease 0s 1 normal both running;
+    animation-delay: 1s;
+}
+
+@keyframes slide-left-anim {
+    0% {
+        transform: translate(100px, 0px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
 /* SECTION 1 */
 
 .hero-container {
@@ -162,11 +217,24 @@ main {
     position: absolute;
     padding: 23px;
     top: 70%;
+    z-index: 5;
 }
 
 .link {
     position: relative;
     border: 5px solid var(--main-black);
+    background-color: white;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.link img {
+    transition: transform 0.3s, opacity 0.2s;
+}
+
+.link:hover img {
+    opacity: 75%;
+    transform: scale(102%);
 }
 
 .link img {
