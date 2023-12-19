@@ -32,7 +32,7 @@ a {
 
 @font-face{
     font-family: 'CenturyGothic';
-    src: url('/homework/repository/portfolio/assets/fonts/CenturyGothic.ttf') format('truetype');
+    src: url('/portfolio/assets/fonts/CenturyGothic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
